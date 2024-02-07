@@ -1,15 +1,18 @@
 // Variable Declarations
-var inputValue = document.querySelector('.inputValue');
-var button = document.querySelector('.button');
-var runMessage = document.querySelector('.runMessage');
-var cityName = document.querySelector('.name');
-var desc = document.querySelector('.desc');
-var icon = document.querySelector('.icon');
-var temp = document.querySelector('.temp');
-var humid = document.querySelector('.humid');
-var dew = document.querySelector('.dew');
-var geolocationElement = document.querySelector('.geolocation');
-var errorElement = document.querySelector('.error'); // Reference to the error element
+let inputValue = document.querySelector('.inputValue');
+let button = document.querySelector('.button');
+let runMessage = document.querySelector('.runMessage');
+let cityName = document.querySelector('.name');
+let desc = document.querySelector('.desc');
+let icon = document.querySelector('.icon');
+let temp = document.querySelector('.temp');
+let humid = document.querySelector('.humid');
+let dew = document.querySelector('.dew');
+let geolocationElement = document.querySelector('.geolocation');
+let errorElement = document.querySelector('.error'); // Reference to the error element
+
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
 // Function to handle the weather data fetching and UI update
 async function fetchWeatherData(url) {
@@ -17,11 +20,11 @@ async function fetchWeatherData(url) {
     const response = await fetch(url);
     const data = await response.json();
 
-    var nameValue = data['name'];
-    var tempValue = data['main']['temp'];
-    var descValue = data['weather'][0]['description'];
-    var humidValue = data['main']['humidity'];
-    var weatherIcon = data['weather'][0]['icon'];
+    let nameValue = data['name'];
+    let tempValue = data['main']['temp'];
+    let descValue = data['weather'][0]['description'];
+    let humidValue = data['main']['humidity'];
+    let weatherIcon = data['weather'][0]['icon'];
 
     console.log(descValue);
 
@@ -37,9 +40,9 @@ async function fetchWeatherData(url) {
     }
 
     // Capitalize the first letter of the city name
-    var capitalizedCityName = capitalizeFirstLetter(nameValue);
+    let capitalizedCityName = capitalizeFirstLetter(nameValue);
     // Capitalize the first letters of the description
-    var capitalizedDescValue = capitalizeFirstLetters(descValue);
+    let capitalizedDescValue = capitalizeFirstLetters(descValue);
 
     // Extract temperature and humidity from the API response
     const temperature = tempValue;
@@ -80,7 +83,7 @@ if (dewPoint <55) {
 }
 
     // Create the weather icon element
-    var iconElement = document.createElement('img');
+    let iconElement = document.createElement('img');
     iconElement.src = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
 
     // Remove any existing weather icons
@@ -157,7 +160,7 @@ function capitalizeFirstLetter(string) {
 
 // Function to capitalize the first letter of each word in a string
 function capitalizeFirstLetters(string) {
-  var words = string.split(' ');
+  let words = string.split(' ');
   for (var i = 0; i < words.length; i++) {
     words[i] = capitalizeFirstLetter(words[i]);
   }

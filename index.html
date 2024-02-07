@@ -10,54 +10,34 @@
 </head> 
 
 <body>
-  <h1>Dew You Really Want to Run?</h1>
-  <div id="weather-container"></div>  
 
-  <!-- Search a City and Error Message -->
-  <div class="input">
-    <input type="text" class="inputValue" placeholder="Enter a city">
-    <input type="submit" value="Submit" class="button">
-  </div>
+  <div class="wrapper-main">
 
-  <div class="error"></div>
+    <h1>Dew You Really Want to Run?</h1>
 
-  <!-- Main Content -->
-  <div class="display">
-    <p class="name"></p>
-
-    <div class="info">
-      <p class="icon"></p>
-      <p class="desc"></p>
-      <p class="temp"></p>
-      <p class="humid"></p>
-
-      <div class="current">
-        <p class="dew"></p>
-      </div>
-
-      <div class="runMessage"></div>
-  
-      <div class="future"></div>
-
+    <!-- Search a City and Error Message -->
+    <div class="input">
+      <input type="text" class="inputValue" placeholder="Enter a city">
+      <input type="submit" value="Submit" class="button">
     </div>
-  </div>
+    <div class="error"></div>
 
- 
+    <!-- Main Content -->
+    <div class="display">
+        <p class="name"></p>
+        <p class="icon"></p>
+        <p class="desc"></p>
+        <p class="temp"></p>
+        <p class="humid"></p>
+        <p class="dew"></p>
+        <div class="runMessage"></div>
+    </div> 
+    
+  </div>
 
   <footer class="footer">
-  <p>
-    Copyright ©
-    <script>
-      // program hates document.write (fix)
-      document.write(new Date().getFullYear())
-    </script>
-    Muffin & Squirrel
-  </p>
-  <!-- <a href="https://github.com/mlmarouc" target="_blank">
-    <i class="github"></i
-  ></a> -->
+    <p>&copy; <span id="currentYear"></span> Muffin & Squirrel</p>
   </footer>
-
 
 </body>
 </html>
