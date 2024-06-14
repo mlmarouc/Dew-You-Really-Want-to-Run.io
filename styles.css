@@ -1,12 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
-    color: #444444;
+  margin: 0;
+  padding: 0;
+  color: #444444;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
   font-family: Poppins, sans-serif;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
@@ -19,55 +23,55 @@ body {
   margin: 0 auto;
 }
 
- h1 {
+h1 {
   font-size: 50px;
   padding-bottom: 50px;
 }
 
- .input {
-    margin-bottom: 20px;
- }
-
- input[type="text"]{
-    height: 50px;
-    width: 300px;
-    background-color: #e7e7e7;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 2px;
-    padding: 0 15px;
- }
-
- input[type="submit"]{
-    height: 50px;
-    width: 100px;
-    background-color: #e7e7e7;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 2px;
- }
-
- .button:hover {
-   background-color: #CCCCCC;
-   font-size: 20px;
-   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
- }
-
- .error {
-  /* Keep text in place */
-  height: 20px; 
+.input {
+  margin-bottom: 20px;
 }
 
- .display {
+input[type="text"] {
+  height: 50px;
+  width: 300px;
+  background-color: #e7e7e7;
+  font-weight: bold;
   font-size: 20px;
- }
- 
- .name {
+  border: none;
+  border-radius: 2px;
+  padding: 0 15px;
+}
+
+input[type="submit"] {
+  height: 50px;
+  width: 100px;
+  background-color: #e7e7e7;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: #CCCCCC;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+  /* Keep text in place */
+  height: 20px;
+}
+
+.display {
+  font-size: 20px;
+}
+
+.name {
   padding-top: 10px;
   font-size: 40px;
-  font-weight:bold; 
+  font-weight: bold;
 }
 
 img {
@@ -75,45 +79,57 @@ img {
   height: auto;
 }
 
- .dew {
+.dew {
   padding-top: 30px;
+  width: 400px; /* Same width as the combined input fields */
+  margin-left: auto; /* Center the message */
+  margin-right: auto; /* Center the message */
 }
 
 .runMessage {
   font-size: 32px;
   text-align: center;
-  font-weight:bold; 
-  width: 100%;
+  font-weight: bold;
+  width: 400px; /* Same width as the combined input fields */
   padding: 10px;
   margin-top: 50px;
+  margin-left: auto; /* Center the message */
+  margin-right: auto; /* Center the message */
 }
 
- footer {
+footer {
   padding-bottom: 10px;
 }
 
+/* Autofill background color fix */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #e7e7e7 inset !important; /* Change to your desired background color */
+  -webkit-text-fill-color: #444444 !important; /* Change to your desired text color */
+}
+
+input:-moz-autofill {
+  box-shadow: 0 0 0 30px #e7e7e7 inset !important;
+  -moz-text-fill-color: #444444 !important; /* Change to your desired text color */
+}
 
 
 /* Responsive Design */
-
 @media only screen and (max-width: 600px) {
-  
   .wrapper-main {
-    width: 100%;
-    padding: 70px 0;
-    /* background-color: green; */
+      width: 90%; /* Adjusted to fit within viewport */
+      padding: 70px 0;
   }
 
   h1 {
-    font-size: 45px;
-    padding-bottom: 40px;
+      font-size: 45px;
+      padding-bottom: 40px;
   }
-  
-   .input {
+
+  .input {
       margin-bottom: 0px;
-   }
-  
-   input[type="text"]{
+  }
+
+  input[type="text"] {
       height: 40px;
       width: 180px;
       background-color: #e7e7e7;
@@ -122,9 +138,9 @@ img {
       border: none;
       border-radius: 2px;
       padding: 0 15px;
-   }
-  
-   input[type="submit"]{
+  }
+
+  input[type="submit"] {
       height: 40px;
       width: 100px;
       background-color: #e7e7e7;
@@ -132,58 +148,50 @@ img {
       font-size: 18px;
       border: none;
       border-radius: 2px;
-   }
-  
-   .display {
-    font-size: 18px;
-   }
-   
-   .name {
-    padding-top: 10px;
-    font-size: 30px;
-    font-weight:bold; 
   }
-  
+
+  .display {
+      font-size: 18px;
+  }
+
+  .name {
+      padding-top: 10px;
+      font-size: 30px;
+      font-weight: bold;
+  }
+
   img {
-    width: 15%;
-    height: auto;
+      width: 15%;
+      height: auto;
   }
 
   .dew {
-    padding-top: 20px;
-  }
-  
-  .runMessage {
-    font-size: 25px;
-    text-align: center;
-    font-weight:bold; 
-    width: 100%;
+      padding-top: 20px;
+      width: 280px; /* Adjusted to fit within viewport */
   }
 
+  .runMessage {
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      width: 280px; /* Adjusted to fit within viewport */
+  }
 }
 
 @media only screen and (min-width: 601px) {
-  
   .wrapper-main {
-    width: 100%;
-    /* background-color: red; */
+      width: 100%;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
-  
   .wrapper-main {
-    width: 100%;
-    /* background-color: purple; */
+      width: 100%;
   }
-
 }
 
 @media only screen and (min-width: 992px) {
-  
   .wrapper-main {
-    width: 100%;
+      width: 100%;
   }
-
 }
