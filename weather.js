@@ -69,7 +69,7 @@ async function fetchWeatherData(url) {
     } else if (dewPoint >= 70 && dewPoint < 75) {
       dew.innerHTML += '<br>Uncomfortable and oppressive.';
       runMessage.innerHTML = 'Prepare yourself. Easy runs are tough and hard runs will be like running into Mordor.';
-    } else if (dewPoint > 75 && dewPoint < 80) {
+    } else if (dewPoint >= 75 && dewPoint < 80) {
       dew.innerHTML += '<br>Dangerous. Hard runs not recommended.';
       runMessage.innerHTML = 'Danger zone! Run at your own risk.';
     } else if (dewPoint >= 80) {
@@ -158,17 +158,9 @@ function capitalizeFirstLetters(string) {
   return string.split(' ').map(capitalizeFirstLetter).join(' ');
 }
 
-
-
-
-
-
-
-
-// //Add the best time of the day to run/day of the week
-// //Better icons?
-// //Fix city, state
-// //Current location faster
+// Add the best time of the day to run/day of the week
+// Fix city, state
+// Current location faster
 
 // API with AccuWeather
 // // Select necessary elements
